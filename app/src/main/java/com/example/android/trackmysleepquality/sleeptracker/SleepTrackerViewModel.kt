@@ -35,7 +35,7 @@ class SleepTrackerViewModel (
    // Define a variable, tonight, to hold the current night, and make it MutableLiveData.
     private var tonight = MutableLiveData<SleepNight?>()
     // Define a variable, nights. Then getAllNights() from the database and assign to the nights
-    private val nights = database.getALLNights()
+    val nights = database.getALLNights()
 
     val nightsString = Transformations.map(nights) { nights ->
         formatNights(nights, application.resources)
@@ -140,7 +140,7 @@ class SleepTrackerViewModel (
             clear()
             //Add clear tonight since it's no longer in the database
             tonight.value = null
-            // To trigger the event
+            // Show a snackbar message, because it is friendly.
             _showSnackBarEvent.value = true
 
         }
