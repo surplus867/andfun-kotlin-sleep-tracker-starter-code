@@ -46,22 +46,7 @@
             app:layout_constraintBottom_toTopOf="@+id/clear_button"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/stop_button"
-            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" >
-
-            <!-- In the TextView, we can access the nightsString LiveData,
-                 which keeps it displayed and updated in the TextView
-                 whenever it changes. -->
-
-            <TextView
-                android:id="@+id/textview"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/margin"
-                android:layout_marginTop="@dimen/margin"
-                android:layout_marginEnd="@dimen/margin"
-                android:text="@{sleepTrackerViewModel.nightsString}"/>
-        </androidx.recyclerview.widget.RecyclerView>
+            app:layout_constraintTop_toBottomOf="@+id/stop_button" />
 
         <!-- With data binding and LiveData, we can track the buttons' visibility states
              from the ViewModel. The click handler is in the ViewModel as well, and
