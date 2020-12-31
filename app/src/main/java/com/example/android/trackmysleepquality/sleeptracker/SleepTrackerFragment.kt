@@ -84,7 +84,6 @@ class SleepTrackerFragment : Fragment() {
             }
         })
 
-
         // add an observer for navigateToSleepQuality
         sleepTrackerViewModel.navigateToSleepQuality.observe(viewLifecycleOwner, Observer {
             // Inside the observer block, navigate and pass along the ID of the current night, and call
